@@ -1,68 +1,64 @@
 ---
+
+
 R1:
     hostname: 172.29.129.11
-    platform: 'ios'
-    username: wayne
-    password: cisco
     groups:
         - cisco_group
+    data:
+        domain: kwiatriot
 
 R2:
     hostname: 172.29.129.12
-    platform: 'ios'
-    username: wayne
-    password: cisco
     groups:
         - cisco_group
+    data:
+        domain: kwiatriot
+
 
 R3:
     hostname: 172.29.129.13
-    platform: 'ios'
-    username: wayne
-    password: cisco
     groups:
         - cisco_group
+    data:
+        domain: kwiatriot
 
 
 R4:
     hostname: 172.29.129.14
-    platform: 'ios'
-    username: wayne
-    password: cisco
     groups:
         - cisco_group
+    data:
+        domain: kwiatriot
 
 
 R5:
     hostname: 172.29.129.15
-    platform: 'ios'
-    username: wayne
-    password: cisco
     groups:
         - cisco_group
+    data:
+        domain: kwiatriot
 
 
 R6:
     hostname: 172.29.129.16
-    platform: 'ios'
-    username: wayne
-    password: cisco
     groups:
         - cisco_group
+    data:
+        domain: kwiatriot
 
 
 R7:
     hostname: 172.29.129.17
-    platform: 'ios'
-    username: wayne
-    password: cisco
     groups:
         - cisco_group
+    data:
+        domain: kwiatriot
+
 
 R8:
     hostname: 172.29.129.18
-    platform: 'ios'
-    username: wayne
-    password: cisco
     groups:
         - cisco_group
+    data:
+        domain: kwiatriot
