@@ -1,0 +1,20 @@
+---
+
+routers:
+  hosts:
+    R1:
+      ansible_host: 172.29.129.11
+    R2:
+      ansible_host: 172.29.129.12
+    R3:
+      ansible_host: 172.29.129.13
+    R4:
+      ansible_host: 172.29.129.14
+    R5:
+      ansible_host: 172.29.129.15
+    R6:
+      ansible_host: 172.29.129.16
+    R7:
+      ansible_host: 172.29.129.17
+    R8:
+      ansible_host: 172.29.129.18

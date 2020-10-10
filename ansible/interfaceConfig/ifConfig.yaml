@@ -1,0 +1,40 @@
+---
+- name: Initial Int setup
+  hosts: routers
+  tasks:
+
+  - name: Inital int setup
+    cisco.ios.ios_interfaces:
+      config:
+      - name: GigabitEthernet0/0
+        description: MGMT Interface
+        enabled: true
+      - name: GigabitEthernet0/1
+        description: ospf link
+        enabled: true
+      - name: GigabitEthernet0/2
+        description: ospf link
+        enabled: true    
+      state: merged
+
+  - name: Replaced provided OSPF V2 configuration
+    cisco.ios.ios_ospfv2:
+      config:
+        processes:
+        - process_id: 1
+          vrf: blue
+          domain_id:
+            ip_address:
+              address: 192.0.4.1
+          max_metric:
+            router_lsa: true
+            on_startup:
+              time: 200
+          maximum_paths: 15
+          ttl_security:
+            hops: 7
+          areas:
+          - area_id: '0'
+            default_cost: 10
+            authentication:
+              message_digest: true
