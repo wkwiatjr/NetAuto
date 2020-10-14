@@ -23,9 +23,11 @@ SWITCHPORT:
             description: To HQ 
         g0/1:
             switchport: disabled
+            ipaddr:
             description: L3 etherchannel to C2
         g0/2:
             switchport: disabled
+            ipaddr: 
             description: L3 etherchannel to C2
         g0/3:
             switchport: disabled

@@ -4,9 +4,11 @@
 interface {{ key }}
 {% if interfaces[key]['switchport'] == 'disabled' %}}
 no switchport
+ip address {{ interfaces[key]['ipaddr'] }}
+description {{ interfaces[key]['description'] }}
 {% else %}}
-ip address {{ john[key]['ipaddr'] }}
-description {{ john[key]['description'] }}
+ip address {{ interfaces[key]['ipaddr'] }}
+description {{ interfaces[key]['description'] }}
 {% endif %}
 {% endfor %}
 {% endif %}

@@ -47,15 +47,25 @@ SWITCHPORT:
             ipaddr: 10.1.1.18 255.255.255.252
             description: To C2
         vlan10:
+            switchport: enabled
             ipaddr: 10.1.10.2 255.255.255.0
+            description: 
         vlan20:
+            switchport: enabled
             ipaddr: 10.1.20.2 255.255.255.0
+            description:
         vlan30:
+            switchport: enabled
             ipaddr: 10.1.30.2 255.255.255.0
+            description:
         vlan40:
+            switchport: enabled
             ipaddr: 10.1.40.2 255.255.255.0
+            description:
         vlan99:
+            switchport: enabled
             ipaddr: 10.1.99.2 255.255.255.0
+            description:
         
 VLAN:
   - number: 10
