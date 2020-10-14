@@ -1,0 +1,47 @@
+---
+#ISIS:
+#    nsap: 49.0001.0000.0000.0001.00
+#    level: level-1-2
+#    interfaces:
+#        g0/1:
+#            sub_iface: G0/1.10
+#            encapsulation: dot1q 10
+#        g0/2:
+#            sub_iface: G0/2.10
+#            encapsulation: dot1q 10
+#        g0/3:
+#            sub_iface: G0/3.10
+#            encapsulation: dot1q 10
+#        loo0:
+#            ipaddr: 1.1.1.1 255.255.255.255
+
+SWITCHPORT:
+    interfaces:
+        g0/0:
+            switchport: disabled
+            ipaddr: 10.1.1.1 255.255.255.252
+            description: To HQ 
+        g0/1:
+            switchport: disabled
+            description: L3 etherchannel to C2
+        g0/2:
+            switchport: disabled
+            description: L3 etherchannel to C2
+        g0/3:
+            switchport: disabled
+            ipaddr: 10.1.1.9 255.255.255.252
+            description: To D1
+        g1/0:
+            switchport: disabled
+            ipaddr: 10.1.1.13 255.255.255.252
+            description: To D2
+        g1/1:
+            switchport: disabled
+            ipaddr: 10.1.1.25 255.255.255.252
+            description: To DC1
+        g1/2:
+            switchport: disabled
+            ipaddr: 10.1.1.29 255.255.255.252
+            description: To DC2
+
+

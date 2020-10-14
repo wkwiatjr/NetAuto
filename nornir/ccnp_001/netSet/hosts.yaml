@@ -1,0 +1,123 @@
+---
+
+C1:
+    hostname: 172.29.129.2
+    groups:
+        - switch_group
+    data:
+        all: yes
+        #routing: yes
+        switchport: yes
+
+
+C2:
+    hostname: 172.29.129.3
+    groups:
+        - switch_group
+    data:
+        all: yes
+        #routing: yes
+        switchport: yes
+
+
+
+D1:
+    hostname: 172.29.129.4
+    groups:
+        - switch_group
+    data:
+        all: yes
+        #routing: yes
+        switchport: yes
+        etherchannel: yes
+        trunking: yes
+        vlan: yes
+
+D2:
+    hostname: 172.29.129.5
+    groups:
+        - switch_group
+    data:
+        all: yes
+        #routing: yes
+        switchport: yes
+        etherchannel: yes
+        trunking: yes
+        vlan: yes
+
+A1:
+    hostname: 172.29.129.6
+    groups:
+        - switch_group
+    data:
+        all: yes
+        switchport: yes
+        trunking: yes
+        vlan: yes
+
+
+A2:
+    hostname: 172.29.129.7
+    groups:
+        - switch_group
+    data:
+        all: yes
+        switchport: yes
+        trunking: yes
+        vlan: yes
+
+A3:
+    hostname: 172.29.129.8
+    groups:
+        - switch_group
+    data:
+        all: yes
+        switchport: yes
+        trunking: yes
+        vlan: yes
+
+A4:
+    hostname: 172.29.129.9
+    groups:
+        - switch_group
+    data:
+        all: yes
+        switchport: yes
+        trunking: yes
+        vlan: yes
+
+DC1:
+    hostname: 172.29.129.10
+    groups:
+        - data_group
+    data:
+        all: yes
+        #routing: yes
+        switchport: yes
+
+DC2:
+    hostname: 172.29.129.11
+    groups:
+        - data_group
+    data:
+        all: yes
+        #routing: yes
+        switchport: yes
+
+L1:
+    hostname: 172.29.129.12
+    groups:
+        - data_group
+    data:
+        all: yes
+        #routing: yes
+        switchport: yes
+
+L2:
+    hostname: 172.29.129.13
+    groups:
+        - data_group
+    data:
+        all: yes
+        #routing: yes
+        switchport: yes

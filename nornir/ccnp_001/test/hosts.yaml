@@ -1,0 +1,92 @@
+---
+HQ:
+    hostname: 172.29.129.1
+    platform: 'ios'
+    username: wayne
+    password: cisco
+    groups:
+        - cisco_group
+C1:
+    hostname: 172.29.129.2
+    platform: 'ios'
+    username: wayne
+    password: cisco
+    groups:
+        - cisco_group
+C2:
+    hostname: 172.29.129.3
+    platform: 'ios'
+    username: wayne
+    password: cisco
+    groups:
+        - cisco_group
+D1:
+    hostname: 172.29.129.4
+    platform: 'ios'
+    username: wayne
+    password: cisco
+    groups:
+        - cisco_group
+D2:
+    hostname: 172.29.129.5
+    platform: 'ios'
+    username: wayne
+    password: cisco
+    groups:
+        - cisco_group
+A1:
+    hostname: 172.29.129.6
+    platform: 'ios'
+    username: wayne
+    password: cisco
+    groups:
+        - cisco_group
+A2:
+    hostname: 172.29.129.7
+    platform: 'ios'
+    username: wayne
+    password: cisco
+    groups:
+        - cisco_group
+A3:
+    hostname: 172.29.129.8
+    platform: 'ios'
+    username: wayne
+    password: cisco
+    groups:
+        - cisco_group
+A4:
+    hostname: 172.29.129.9
+    platform: 'ios'
+    username: wayne
+    password: cisco
+    groups:
+        - cisco_group
+DC1:
+    hostname: 172.29.129.10
+    platform: 'ios'
+    username: wayne
+    password: cisco
+    groups:
+        - cisco_group
+DC2:
+    hostname: 172.29.129.11
+    platform: 'ios'
+    username: wayne
+    password: cisco
+    groups:
+        - cisco_group
+L1:
+    hostname: 172.29.129.12
+    platform: 'ios'
+    username: wayne
+    password: cisco
+    groups:
+        - cisco_group
+L2:
+    hostname: 172.29.129.13
+    platform: 'ios'
+    username: wayne
+    password: cisco
+    groups:
+        - cisco_group

@@ -1,0 +1,200 @@
+---
+testbed:
+
+  credentials:
+    default:
+      username: "wayne"
+      password: "cisco"
+
+devices:
+  C1:
+    alias: C1
+    os: ios
+    type: IOSv
+    connections:
+
+      defaults:
+        class: unicon.Unicon
+      console:
+        protocol: ssh
+        ip: 172.29.129.2
+
+    custom:
+      abstration:
+         order: [os, type]
+
+  C2:
+    alias: C2
+    os: ios
+    type: IOSv
+    connections:
+
+      defaults:
+        class: unicon.Unicon
+      console:
+        protocol: ssh
+        ip: 172.29.129.3
+
+    custom:
+      abstration:
+         order: [os, type]
+
+  D1:
+    alias: D1
+    os: ios
+    type: IOSv
+    connections:
+
+      defaults:
+        class: unicon.Unicon
+      console:
+        protocol: ssh
+        ip: 172.29.129.4
+
+    custom:
+      abstration:
+         order: [os, type]
+
+  D2:
+    alias: D2
+    os: ios
+    type: IOSv
+    connections:
+
+      defaults:
+        class: unicon.Unicon
+      console:
+        protocol: ssh
+        ip: 172.29.129.5
+
+    custom:
+      abstration:
+         order: [os, type]
+
+  A1:
+    alias: A1
+    os: ios
+    type: IOSv
+    connections:
+
+      defaults:
+        class: unicon.Unicon
+      console:
+        protocol: ssh
+        ip: 172.29.129.6
+
+    custom:
+      abstration:
+         order: [os, type]
+
+  A2:
+    alias: A2
+    os: ios
+    type: IOSv
+    connections:
+
+      defaults:
+        class: unicon.Unicon
+      console:
+        protocol: ssh
+        ip: 172.29.129.7
+
+    custom:
+      abstration:
+         order: [os, type]
+
+  A3:
+    alias: A3
+    os: ios
+    type: IOSv
+    connections:
+
+      defaults:
+        class: unicon.Unicon
+      console:
+        protocol: ssh
+        ip: 172.29.129.8
+
+    custom:
+      abstration:
+         order: [os, type]
+
+  A4:
+    alias: A4
+    os: ios
+    type: IOSv
+    connections:
+
+      defaults:
+        class: unicon.Unicon
+      console:
+        protocol: ssh
+        ip: 172.29.129.9
+
+    custom:
+      abstration:
+         order: [os, type]
+
+  DC1:
+    alias: DC1
+    os: ios
+    type: IOSv
+    connections:
+
+      defaults:
+        class: unicon.Unicon
+      console:
+        protocol: ssh
+        ip: 172.29.129.10
+
+    custom:
+      abstration:
+         order: [os, type]
+
+  DC2:
+    alias: DC1
+    os: ios
+    type: IOSv
+    connections:
+
+      defaults:
+        class: unicon.Unicon
+      console:
+        protocol: ssh
+        ip: 172.29.129.11
+
+    custom:
+      abstration:
+         order: [os, type]
+
+  L1:
+    alias: DC1
+    os: ios
+    type: IOSv
+    connections:
+
+      defaults:
+        class: unicon.Unicon
+      console:
+        protocol: ssh
+        ip: 172.29.129.12
+
+    custom:
+      abstration:
+         order: [os, type]
+
+  L2:
+    alias: L2
+    os: ios
+    type: IOSv
+    connections:
+
+      defaults:
+        class: unicon.Unicon
+      console:
+        protocol: ssh
+        ip: 172.29.129.13
+
+    custom:
+      abstration:
+         order: [os, type]

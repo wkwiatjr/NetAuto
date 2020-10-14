@@ -1,0 +1,22 @@
+---
+Trunked:
+    trunk:
+        interfaces:
+            gig0/0:
+                allowed_vlans: 10,20,30,40
+                native: 99
+            gig0/1:
+                allowed_vlans: 10,20,30,40
+                native: 99
+VLAN:
+  - number: 10
+    name: TEN
+  - number: 20
+    name: TWENTY
+  - number: 30
+    name: THIRTY
+  - number: 40
+    name: FORTY
+  - number: 99
+    name: NATIVE
+

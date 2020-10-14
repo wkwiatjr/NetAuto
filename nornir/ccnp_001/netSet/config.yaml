@@ -1,0 +1,15 @@
+---
+
+inventory:
+    plugin: SimpleInventory
+    options:
+        host_file: "/Users/wkwiat/Documents/GitHub/NetAuto/nornir/ccnp_001/netSet/hosts.yaml"
+        group_file: "//Users/wkwiat/Documents/GitHub/NetAuto/nornir/ccnp_001/netSet/groups.yaml"
+        defaults_file: "/Users/wkwiat/Documents/GitHub/NetAuto/nornir/ccnp_001/netSet/defaults.yaml"
+
+runners:
+    plugin: threaded
+    options:
+        num_workers: 20
+
+        

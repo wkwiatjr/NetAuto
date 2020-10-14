@@ -1,0 +1,19 @@
+---
+
+switch_group:
+    platform: 'ios'
+    data:
+        ntp: 99.99.99.99
+        syslog: 99.99.99.99
+
+router_group:
+    platform: 'ios'
+    data:
+        ntp: 99.99.99.99
+        syslog: 99.99.99.99
+
+data_group:
+    platform: 'ios'
+    data:
+        ntp: 99.99.99.99
+        syslog: 99.99.99.99

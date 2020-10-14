@@ -1,0 +1,8 @@
+nornir
+pyats[full]
+nornir-scrapli
+pyfiglet
+nornir_utils
+nornir_netmiko
+nornir_jinja2
+

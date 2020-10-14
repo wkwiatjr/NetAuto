@@ -1,0 +1,690 @@
+2020-10-13 22:27:31,711 -  nornir.core -     INFO -        run() - Running task 'load_vars' with args {} on 12 hosts
+2020-10-13 22:27:31,744 -  nornir.core -     INFO -        run() - Running task 'load_base' with args {} on 12 hosts
+2020-10-13 22:27:36,795 - nornir.core.task -    ERROR -      start() - Host 'C2': task 'Base Commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.29.129.3:22
+
+
+
+2020-10-13 22:27:36,795 - nornir.core.task -    ERROR -      start() - Host 'L2': task 'Base Commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.29.129.13:22
+
+
+
+2020-10-13 22:27:36,794 - nornir.core.task -    ERROR -      start() - Host 'DC1': task 'Base Commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.29.129.10:22
+
+
+
+2020-10-13 22:27:36,795 - nornir.core.task -    ERROR -      start() - Host 'L1': task 'Base Commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.29.129.12:22
+
+
+
+2020-10-13 22:27:36,796 - nornir.core.task -    ERROR -      start() - Host 'A1': task 'Base Commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.29.129.6:22
+
+
+
+2020-10-13 22:27:36,796 - nornir.core.task -    ERROR -      start() - Host 'A3': task 'Base Commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.29.129.8:22
+
+
+
+2020-10-13 22:27:36,796 - nornir.core.task -    ERROR -      start() - Host 'C1': task 'Base Commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.29.129.2:22
+
+
+
+2020-10-13 22:27:36,796 - nornir.core.task -    ERROR -      start() - Host 'A2': task 'Base Commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.29.129.7:22
+
+
+
+2020-10-13 22:27:36,795 - nornir.core.task -    ERROR -      start() - Host 'A4': task 'Base Commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.29.129.9:22
+
+
+
+2020-10-13 22:27:36,796 - nornir.core.task -    ERROR -      start() - Host 'D2': task 'Base Commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.29.129.5:22
+
+
+
+2020-10-13 22:27:36,797 - nornir.core.task -    ERROR -      start() - Host 'D1': task 'Base Commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.29.129.4:22
+
+
+
+2020-10-13 22:27:36,797 - nornir.core.task -    ERROR -      start() - Host 'DC2': task 'Base Commands' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in connect
+    retry_on_signal(lambda: sock.connect(addr))
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/util.py", line 283, in retry_on_signal
+    return function()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/paramiko/client.py", line 349, in <lambda>
+    retry_on_signal(lambda: sock.connect(addr))
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.29.129.11:22
+
+
+
+2020-10-13 22:27:36,797 - nornir.core.task -    ERROR -      start() - Host 'L2': task 'load_base' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "configure-network.py", line 18, in load_base
+    task.run(task=netmiko_send_config, name="Base Commands", config_commands=base_send)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Base Commands (failed)
+
+
+2020-10-13 22:27:36,797 - nornir.core.task -    ERROR -      start() - Host 'C2': task 'load_base' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "configure-network.py", line 18, in load_base
+    task.run(task=netmiko_send_config, name="Base Commands", config_commands=base_send)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Base Commands (failed)
+
+
+2020-10-13 22:27:36,798 - nornir.core.task -    ERROR -      start() - Host 'DC1': task 'load_base' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "configure-network.py", line 18, in load_base
+    task.run(task=netmiko_send_config, name="Base Commands", config_commands=base_send)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Base Commands (failed)
+
+
+2020-10-13 22:27:36,798 - nornir.core.task -    ERROR -      start() - Host 'L1': task 'load_base' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "configure-network.py", line 18, in load_base
+    task.run(task=netmiko_send_config, name="Base Commands", config_commands=base_send)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Base Commands (failed)
+
+
+2020-10-13 22:27:36,798 - nornir.core.task -    ERROR -      start() - Host 'A1': task 'load_base' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "configure-network.py", line 18, in load_base
+    task.run(task=netmiko_send_config, name="Base Commands", config_commands=base_send)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Base Commands (failed)
+
+
+2020-10-13 22:27:36,798 - nornir.core.task -    ERROR -      start() - Host 'A3': task 'load_base' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "configure-network.py", line 18, in load_base
+    task.run(task=netmiko_send_config, name="Base Commands", config_commands=base_send)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Base Commands (failed)
+
+
+2020-10-13 22:27:36,798 - nornir.core.task -    ERROR -      start() - Host 'C1': task 'load_base' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "configure-network.py", line 18, in load_base
+    task.run(task=netmiko_send_config, name="Base Commands", config_commands=base_send)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Base Commands (failed)
+
+
+2020-10-13 22:27:36,799 - nornir.core.task -    ERROR -      start() - Host 'A2': task 'load_base' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "configure-network.py", line 18, in load_base
+    task.run(task=netmiko_send_config, name="Base Commands", config_commands=base_send)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Base Commands (failed)
+
+
+2020-10-13 22:27:36,799 - nornir.core.task -    ERROR -      start() - Host 'A4': task 'load_base' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "configure-network.py", line 18, in load_base
+    task.run(task=netmiko_send_config, name="Base Commands", config_commands=base_send)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Base Commands (failed)
+
+
+2020-10-13 22:27:36,799 - nornir.core.task -    ERROR -      start() - Host 'D2': task 'load_base' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "configure-network.py", line 18, in load_base
+    task.run(task=netmiko_send_config, name="Base Commands", config_commands=base_send)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Base Commands (failed)
+
+
+2020-10-13 22:27:36,799 - nornir.core.task -    ERROR -      start() - Host 'D1': task 'load_base' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "configure-network.py", line 18, in load_base
+    task.run(task=netmiko_send_config, name="Base Commands", config_commands=base_send)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Base Commands (failed)
+
+
+2020-10-13 22:27:36,799 - nornir.core.task -    ERROR -      start() - Host 'DC2': task 'load_base' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "configure-network.py", line 18, in load_base
+    task.run(task=netmiko_send_config, name="Base Commands", config_commands=base_send)
+  File "/Users/wkwiat/anaconda3/envs/nornir/lib/python3.7/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Base Commands (failed)
+
+
+2020-10-13 22:27:36,801 -  nornir.core -     INFO -        run() - Running task 'load_switchport' with args {} on 12 hosts
+2020-10-13 22:27:36,801 -  nornir.core -     INFO -        run() - Running task 'load_ether' with args {} on 2 hosts
+2020-10-13 22:27:36,801 -  nornir.core -     INFO -        run() - Running task 'load_trunking' with args {} on 6 hosts
+2020-10-13 22:27:36,801 -  nornir.core -     INFO -        run() - Running task 'load_vlan' with args {} on 6 hosts

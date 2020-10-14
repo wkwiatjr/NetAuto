@@ -1,10 +1,10 @@
-#TODO update the imports to be undersocre, see printCommands script
+
 
 from nornir import InitNornir
-from nornir.plugins.tasks.data import load_yaml
-from nornir.plugins.tasks.text import template_file
-from nornir.plugins.functions.text import print_result
-from nornir.plugins.tasks.networking import netmiko_send_config
+from nornir_utils.plugins.tasks.data import load_yaml
+from nornir_plugins.tasks.text import template_file
+from nornir_utils.plugins.functions import print_result
+from nornir_netmiko.tasks import netmiko_send_config
 
 def load_ospf(task):
     data = task.run(task=load_yaml,file=f'./host_vars/{task.host}.yaml')

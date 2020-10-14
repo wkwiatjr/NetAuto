@@ -1,0 +1,10 @@
+{% if 'Trunked' in host.facts %}
+{% set john = host.facts.Trunked.trunk.interfaces %}
+{% for key in john %}
+interface {{ key }}
+switchport trunk encapsulation dot1q
+switchport trunk native vlan {{ john[key]['native'] }}
+switchport mode trunk
+switchport trunk allowed vlan {{ john[key]['allowed_vlans'] }}
+{% endfor %}
+{% endif %}
