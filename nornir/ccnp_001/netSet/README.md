@@ -2,7 +2,7 @@
 Using Nornir, Netmiko, and Jinja2 Template files to send configurations
 
 **TOPOLOGY**:
-![Topology](images/topology.png)
+![topology](images/topology.png)
 
 ------------------------------------------------------------------------------------------
 
